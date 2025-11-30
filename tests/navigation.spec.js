@@ -35,7 +35,7 @@ test.only('navigate to login and fill credentials', async ({ page }) => {
          page.waitForURL("http://172.177.136.15/login?logged=false"),
          login.click()
     ])
-   await page.getByRole('textbox', { name: 'Email' }).fill("ahmedmohamed@gmail.com")
+   await page.getByRole('textbox', { name: 'Email' }).fill("A1n1a1l1y1s1t1@gmail.com")
    await page.getByRole('textbox', { name: 'Password' }).fill("Fadysaber1!")
    const dashboard=page.getByRole('button', { name: 'login' })
    await Promise.all([
@@ -58,37 +58,37 @@ test.only('navigate to login and fill credentials', async ({ page }) => {
     console.log("❌ Element not found, skipping...");
   }
    const timeInput = page.locator('input[name="selectedTimeFrom"]');
+   await page.waitForLoadState('networkidle')
    try {
     if (await timeInput.isVisible()) {
         console.log("Element found, performing action...");
-        await timeInput.check();
-        await page.waitForLoadState('networkidle')
-  await page.getByText('Tu', { exact: true }).click()
-  await page.getByText('Mo', { exact: true }).click()
+        await page.getByText('Tu', { exact: true }).click()
+        await page.getByText('Mo', { exact: true }).click()
+        // await timeInput.check();
 
   //await page.getByText('Item').click({ position: { x: 1457, y: 432} });
   //const time=String(Math.floor(Math.random()*2)).padStart()
 
   // Wait until input is ready
-   await timeInput.waitFor({ state: 'visible' });
+        await timeInput.waitFor({ state: 'visible' });
 
 // Generate random hour according to 12-hour system
-  let hour = Math.floor(Math.random() * 12) + 1;   // 1–12
-  let minute = Math.floor(Math.random() * 60);     // 0–59
+       let hour = Math.floor(Math.random() * 12) + 1;   // 1–12
+       let minute = Math.floor(Math.random() * 60);     // 0–59
 
 // Generate AM or PM randomly
-  const isPM = Math.random() < 0.5;
+        const isPM = Math.random() < 0.5;
 
 // Convert to 24-hour if needed
-  if (isPM && hour !== 12) hour += 12;
-  if (!isPM && hour === 12) hour = 0;
+        if (isPM && hour !== 12) hour += 12;
+        if (!isPM && hour === 12) hour = 0;
 
 // Format to HH:MM
-  const randomTime = 
-  String(hour).padStart(2, '0') + ':' + 
-  String(minute).padStart(2, '0');
+        const randomTime = 
+        String(hour).padStart(2, '0') + ':' + 
+        String(minute).padStart(2, '0');
 
-   await timeInput.fill(randomTime);
+        await timeInput.fill(randomTime);
         
         
     }
@@ -101,33 +101,33 @@ test.only('navigate to login and fill credentials', async ({ page }) => {
    const timeTOInput = page.locator('input[name="selectedTimeTo"]');
    try {
     if (await timeTOInput.isVisible()) {
-        console.log("Element found, performing action...");
-        await timeTOInput.check();
+        console.log("Element found, performing action...")
+        //await timeTOInput.check();
         
         //TO TIME
 
 // Wait until input is ready
-    await timeTOInput.waitFor({ state: 'visible' });
+        await timeTOInput.waitFor({ state: 'visible' });
 
 // Generate random hour according to 12-hour system
-    let hour2 = Math.floor(Math.random() * 12) + 1;   // 1–12
-    let minute2 = Math.floor(Math.random() * 60);     // 0–59
+       let hour2 = Math.floor(Math.random() * 12) + 1;   // 1–12
+       let minute2 = Math.floor(Math.random() * 60);     // 0–59
 
 // Generate AM or PM randomly
-    const isPM2 = Math.random() < 0.5;
+        const isPM2 = Math.random() < 0.5;
 
 // Convert to 24-hour if needed
-   if (isPM2 && hour !== 12) hour += 12;
-   if (!isPM2 && hour === 12) hour = 0;
+        if (isPM2 && hour2 !== 12) hour2 += 12;
+        if (!isPM2 && hour2 === 12) hour2 = 0;
 
 // Format to HH:MM
- const randomTime2 = 
-  String(hour2).padStart(2, '0') + ':' + 
-  String(minute2).padStart(2, '0');
+      const randomTime2 = 
+      String(hour2).padStart(2, '0') + ':' + 
+      String(minute2).padStart(2, '0');
 
 // Fill time
- await timeTOInput.fill(randomTime2);
- await page.getByRole('button', { name: 'Add To Calendar' }).click()
+      await timeTOInput.fill(randomTime2);
+      await page.getByRole('button', { name: 'Add To Calendar' }).click()
 
     }
   } catch (e) {

@@ -153,6 +153,9 @@ test.only('navigate to login and fill credentials', async ({ page }) => {
       console.log("❌ Element not found, skipping...");
     }
     page.pause();
+    const weeklyGoal = page.getByRole('heading', { name: 'Weekly Goal Tracker' });
+    await expect(weeklyGoal).toBeVisible();
+
     //expect(newPage2).toHaveURL("https://calendar.google.com/calendar/u/0/r/eventedit?
     //dates=20251124T000000/20251124T000000&ctz=Africa/Cairo&text=Weekly+Target&recur=RRULE:
     //FREQ%3DWEEKLY;WKST%3DMO;BYDAY%3DTH,FR,TU&uid=4ff2815b-9fd7-4335-934c-6228e26f8b06");

@@ -35,7 +35,7 @@ test.only('navigate to login and fill credentials', async ({ page }) => {
          page.waitForURL("http://172.177.136.15/login?logged=false"),
          login.click()
     ])
-   await page.getByRole('textbox', { name: 'Email' }).fill("pending.status@gmail.com")
+   await page.getByRole('textbox', { name: 'Email' }).fill("kamalelshenawy@test.com")
   
    await page.getByRole('textbox', { name: 'Password' }).fill("Fadysaber1!")
    const dashboard=page.getByRole('button', { name: 'login' })
@@ -137,8 +137,8 @@ test.only('navigate to login and fill credentials', async ({ page }) => {
   const google= page.locator("#atcb-btn-custom-google")
     try{
     if (await google.isVisible()){
-     const [newPage2] = await Promise.all([,
-     page.waitForEvent("popup"),
+     const [newPage2] = await Promise.all([
+      page.waitForEvent("popup"),
       google.click()
      ]);
      expect(newPage2).toBeTruthy();
@@ -152,6 +152,7 @@ test.only('navigate to login and fill credentials', async ({ page }) => {
     catch(e){
       console.log("❌ Element not found, skipping...");
     }
+    page.pause();
     //expect(newPage2).toHaveURL("https://calendar.google.com/calendar/u/0/r/eventedit?
     //dates=20251124T000000/20251124T000000&ctz=Africa/Cairo&text=Weekly+Target&recur=RRULE:
     //FREQ%3DWEEKLY;WKST%3DMO;BYDAY%3DTH,FR,TU&uid=4ff2815b-9fd7-4335-934c-6228e26f8b06");

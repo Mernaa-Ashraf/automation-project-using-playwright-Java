@@ -35,7 +35,8 @@ test.only('navigate to login and fill credentials', async ({ page }) => {
          page.waitForURL("http://172.177.136.15/login?logged=false"),
          login.click()
     ])
-   await page.getByRole('textbox', { name: 'Email' }).fill("newadmin2@gmail.com")
+   await page.getByRole('textbox', { name: 'Email' }).fill("pending.status@gmail.com")
+  
    await page.getByRole('textbox', { name: 'Password' }).fill("Fadysaber1!")
    const dashboard=page.getByRole('button', { name: 'login' })
    await Promise.all([
@@ -140,8 +141,12 @@ test.only('navigate to login and fill credentials', async ({ page }) => {
      page.waitForEvent("popup"),
       google.click()
      ]);
+     expect(newPage2).toBeTruthy();
       //await newPage2.waitForLoadState();
       await newPage2.close()
+      expect(newPage2.isClosed()).toBe(true);
+      page.pause();
+    
     } 
   }
     catch(e){

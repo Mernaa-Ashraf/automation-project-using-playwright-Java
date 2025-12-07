@@ -35,7 +35,7 @@ test.only('navigate to login and fill credentials', async ({ page }) => {
          page.waitForURL("http://172.177.136.15/login?logged=false"),
          login.click()
     ])
-   await page.getByRole('textbox', { name: 'Email' }).fill("A1n1a1l1y1s1t1@gmail.com")
+   await page.getByRole('textbox', { name: 'Email' }).fill("newadmin2@gmail.com")
    await page.getByRole('textbox', { name: 'Password' }).fill("Fadysaber1!")
    const dashboard=page.getByRole('button', { name: 'login' })
    await Promise.all([
@@ -133,13 +133,22 @@ test.only('navigate to login and fill credentials', async ({ page }) => {
   } catch (e) {
     console.log("❌ Element not found, skipping...");
   }
-/*const google= page.locator("#atcb-btn-custom-google")
- const [newPage2] = await Promise.all([,
+  const google= page.locator("#atcb-btn-custom-google")
+    try{
+    if (await google.isVisible()){
+     const [newPage2] = await Promise.all([,
      page.waitForEvent("popup"),
       google.click()
      ]);
-    await newPage2.waitForLoadState();
-    expect(newPage2).toHaveURL("https://calendar.google.com/calendar/u/0/r/eventedit?dates=20251124T000000/20251124T000000&ctz=Africa/Cairo&text=Weekly+Target&recur=RRULE:FREQ%3DWEEKLY;WKST%3DMO;BYDAY%3DTH,FR,TU&uid=4ff2815b-9fd7-4335-934c-6228e26f8b06");
-    */
-});
+      //await newPage2.waitForLoadState();
+      await newPage2.close()
+    } 
+  }
+    catch(e){
+      console.log("❌ Element not found, skipping...");
+    }
+    //expect(newPage2).toHaveURL("https://calendar.google.com/calendar/u/0/r/eventedit?
+    //dates=20251124T000000/20251124T000000&ctz=Africa/Cairo&text=Weekly+Target&recur=RRULE:
+    //FREQ%3DWEEKLY;WKST%3DMO;BYDAY%3DTH,FR,TU&uid=4ff2815b-9fd7-4335-934c-6228e26f8b06");
     
+});

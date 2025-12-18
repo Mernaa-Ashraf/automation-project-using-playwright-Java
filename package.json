@@ -12,6 +12,7 @@
     "@types/node": "^24.10.0"
   },
   "dependencies": {
+    "crypto-js": "^4.2.0",
     "promise": "^8.3.0"
   }
 }

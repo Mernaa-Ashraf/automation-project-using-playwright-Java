@@ -80,8 +80,6 @@ test('UI session (codered) + API token → course video', async () => {
   const lessonId =
     internalData.data.course.chapters[0].lessons[0].id;
 
-  // 7️⃣ FINAL UI navigation
-  // 🔥 Uses codered from session (NO Bearer token)
   await page.goto(
     `http://172.177.136.15/courseVideo/${courseSlug}?lessonId=${lessonId}&finalAssessment=false`,
     { waitUntil: 'networkidle' }

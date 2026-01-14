@@ -1,115 +1,91 @@
 const { test, expect, chromium } = require('@playwright/test');
 const fs = require('fs');
+const { login } = require('./login');
 
-const EMAIL = 'teeeeet@intcore.com';
-const PASSWORD = 'Fadysaber1!';
+const EMAIL = "teeeeet@intcore.com";
+const PASSWORD = "Fadysaber1!";
 const STORAGE_FILE = './user-session.json';
+const API_TOKEN_FILE = './api-token.json';
 
-const payload = { Email: EMAIL, password: PASSWORD };
+test('UI session (codered) + API token → course video', async () => {
 
-test('Session-based route + API enrollment → course video', async () => {
   const browser = await chromium.launch({ headless: false });
   let context;
   let page;
 
+  // 1️⃣ Load UI session or login once
   if (fs.existsSync(STORAGE_FILE)) {
     context = await browser.newContext({ storageState: STORAGE_FILE });
   } else {
-    throw new Error('Session file missing. UI login must be done once manually.');
+    context = await browser.newContext();
+    page = await context.newPage();
+    await login(page, EMAIL, PASSWORD);
   }
 
-  page = await context.newPage();
+  if (!page) page = await context.newPage();
 
-  // (NO login again)
-  await page.goto('http://172.177.136.15/your-portal/home?logged=true', {
-    waitUntil: 'networkidle',
-  });
-
-  //  check → user is logged in
-  await expect(page.locator('text=Upgrade To Pro')).toBeVisible();
-
-  // login API → get fresh Bearer token (API ONLY)
-  const loginResponse = await page.request.post(
-    'http://172.177.136.15:8080/api/v2/user/auth/regular/login',
-    {
-      data: payload,
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-    }
+  // 2️⃣ Read API token (ONLY for APIs)
+  const { apiToken } = JSON.parse(
+    fs.readFileSync(API_TOKEN_FILE, 'utf-8')
   );
 
-  expect(loginResponse.ok()).toBeTruthy();
-  const loginData = await loginResponse.json();
-  const authToken = loginData.data.access_token;
-  expect(authToken).toBeTruthy();
+  expect(apiToken).toBeTruthy();
 
-  console.log('✅ API token acquired');
+  // 3️⃣ UI navigation → uses codered from session automatically
+  await page.goto(
+    'http://172.177.136.15/your-portal/home?logged=true',
+    { waitUntil: 'networkidle' }
+  );
 
-  //  Get purchased courses (API auth)
+  // 4️⃣ My Courses API (Bearer token)
   const coursesResponse = await page.request.get(
     'http://172.177.136.15:8080/api/v2/open-api/user/actions/my-courses?model=purchased&page=1',
     {
       headers: {
-        Authorization: `Bearer ${authToken}`,
-        Accept: 'application/json',
-      },
+        Authorization: `Bearer ${apiToken}`,
+        Accept: 'application/json'
+      }
     }
   );
 
-  expect(coursesResponse.ok()).toBeTruthy();
   const coursesData = await coursesResponse.json();
+  const firstCourse = coursesData.data.courses.data[0];
 
-  const course = coursesData.data.courses.data[0];
-  const courseId = course.id;
-  const courseSlug = course.slug_url;
+  const courseId = firstCourse.id;
+  const courseSlug = firstCourse.slug_url;
 
-  console.log('✅ Course:', courseSlug);
-
-  // Enroll user (API)
-  const enrollResponse = await page.request.post(
+  // 5️⃣ Enroll API
+  await page.request.post(
     `http://172.177.136.15:8080/api/v2/course/${courseId}/actions/enroll`,
     {
       headers: {
-        Authorization: `Bearer ${authToken}`,
-        Accept: 'application/json',
-      },
+        Authorization: `Bearer ${apiToken}`,
+        Accept: 'application/json'
+      }
     }
   );
 
-  expect(enrollResponse.ok()).toBeTruthy();
-  console.log('✅ Enrolled via API');
-
-  
-  await page.reload({ waitUntil: 'networkidle' });
-
-  //  Get internal course structure
+  // 6️⃣ Internal API
   const internalResponse = await page.request.get(
     `http://172.177.136.15:8080/api/v2/course/${courseSlug}/internal`,
     {
       headers: {
-        Authorization: `Bearer ${authToken}`,
-        Accept: 'application/json',
-      },
+        Authorization: `Bearer ${apiToken}`,
+        Accept: 'application/json'
+      }
     }
   );
 
-  expect(internalResponse.ok()).toBeTruthy();
   const internalData = await internalResponse.json();
-
   const lessonId =
     internalData.data.course.chapters[0].lessons[0].id;
 
-  console.log('✅ Lesson ID:', lessonId);
-
-  // Navigate to VIDEO ROUTE (SESSION-BASED)
+  // 7️⃣ FINAL UI navigation
+  // 🔥 Uses codered from session (NO Bearer token)
   await page.goto(
     `http://172.177.136.15/courseVideo/${courseSlug}?lessonId=${lessonId}&finalAssessment=false`,
     { waitUntil: 'networkidle' }
   );
 
-  //  last require > video 
-
-  await page.pause(); 
+  await page.pause();
 });

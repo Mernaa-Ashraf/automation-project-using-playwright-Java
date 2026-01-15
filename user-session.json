@@ -1,0 +1,405 @@
+{
+  "cookies": [
+    {
+      "name": "cee",
+      "value": "zWDK5%2BLjG0qDr9iH5whxSinXRbY20Djl7HostTvZq0I%3D.%7B%22em%22%3A%22a5946d684c6b50804df1ed1ba367ee112fa58ba4511749b6b19edf36e834662e%22%7D",
+      "domain": ".capig.stape.ma",
+      "path": "/events/806d57d4bfac8cd0659719d68a4d9e700949c92d5b2162d18eaa232fe630a188",
+      "expires": 1776259023.831547,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_GRECAPTCHA",
+      "value": "09AKhCRwjSt9J9N1SKIabulUYk3jTzgYn3f5x5_Sn0LkXQVAeD95GnLYcYwEDzCSuGK0HEku8Kuu9vaM0g1X8w4BU",
+      "domain": "www.google.com",
+      "path": "/recaptcha",
+      "expires": 1784035028.964572,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_gid",
+      "value": "GA1.2.1543740375.1768483009",
+      "domain": ".eccouncil.org",
+      "path": "/",
+      "expires": 1768569409,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_omappvp",
+      "value": "r3PnoGhgNyBgu9UUJ47eOczQLFtiwWgjL8aVOhiZERBdtfGGdzyTLvnLAPgBfm823U80QLqmYFobnpyVEl2ixcO4fcR7jG1D",
+      "domain": "uat-learn.eccouncil.org",
+      "path": "/",
+      "expires": 1803043009.742622,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_omappvs",
+      "value": "1768483009742",
+      "domain": "uat-learn.eccouncil.org",
+      "path": "/",
+      "expires": 1768484209,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "lidc",
+      "value": "\"b=VGST03:s=V:r=V:a=V:p=V:g=3648:u=1:x=1:i=1768483008:t=1768569408:v=2:sig=AQFc2JSMelDb4C0b4S3KSjAIlxrWnwUL\"",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1768569409.939558,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "li_sugr",
+      "value": "ab97289b-8603-4d22-a3d7-3686c18dc20d",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1776259010.5313,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "bcookie",
+      "value": "\"v=2&070ada28-9a2d-4da9-8e6b-cb37f0ed00d2\"",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1800019010.531412,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "prism_66788452",
+      "value": "cf918adc-4d3b-4185-9c24-cd370453a2ae",
+      "domain": "prism.app-us1.com",
+      "path": "/",
+      "expires": 1771075010.13098,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "UserMatchHistory",
+      "value": "AQK2rGfMCg962AAAAZvBzTKx6V70558gPXGZt0DEl_cfcLDCOadWbbnoS7jIYmO3lSdHjhj0_Ih_sA",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1771075010.165709,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AnalyticsSyncHistory",
+      "value": "AQJP2MsovSW5SgAAAZvBzTKxkOBuzyO7m36ohAbbUbtTKj4TuR2G0KIAnViuUDxdMeL3u0p9Yyp4-YKxBXLZ_Q",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1771075010.165765,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "eccouncil.org_lantern",
+      "value": "74f27f4b-f03e-46f6-8adf-d2fdf56264cb",
+      "domain": ".roeye.com",
+      "path": "/",
+      "expires": 1784207810.192142,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "muc_ads",
+      "value": "8e9d02f1-2bf3-4d62-b156-65a6ac434da6",
+      "domain": ".t.co",
+      "path": "/",
+      "expires": 1803043010.20221,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "guest_id_marketing",
+      "value": "v1%3A176848300924211695",
+      "domain": ".twitter.com",
+      "path": "/",
+      "expires": 1803043010.219976,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "guest_id_ads",
+      "value": "v1%3A176848300924211695",
+      "domain": ".twitter.com",
+      "path": "/",
+      "expires": 1803043010.220153,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "personalization_id",
+      "value": "\"v1_34E2ToBdhw4XubHkyy0l2g==\"",
+      "domain": ".twitter.com",
+      "path": "/",
+      "expires": 1803043010.22021,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "guest_id",
+      "value": "v1%3A176848300924211695",
+      "domain": ".twitter.com",
+      "path": "/",
+      "expires": 1803043010.220264,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "bscookie",
+      "value": "\"v=1&202601151316492935aaee-2952-4ecc-80fe-dcf2c11f6945AQH2-kHhtD4o_m_pN0kWyf9cdtsSpg5u\"",
+      "domain": ".www.linkedin.com",
+      "path": "/",
+      "expires": 1800019010.379822,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.1919884364.1768483009",
+      "domain": ".eccouncil.org",
+      "path": "/",
+      "expires": 1803043011.859231,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_14R3SDTCHG",
+      "value": "GS2.1.s1768483009$o1$g0$t1768483009$j60$l0$h0",
+      "domain": ".eccouncil.org",
+      "path": "/",
+      "expires": 1803043011.838092,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_11PRJJ80F5",
+      "value": "GS2.1.s1768483009$o1$g0$t1768483009$j60$l0$h0",
+      "domain": ".eccouncil.org",
+      "path": "/",
+      "expires": 1803043011.866896,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "cookieyes-consent",
+      "value": "consentid:UXZXUWNoa01DRlMxWHh5VnNPWTN4TjM0TVcwZ1g1RUI,consent:no,action:,necessary:yes,functional:no,analytics:no,performance:no,advertisement:no,other:no",
+      "domain": ".eccouncil.org",
+      "path": "/",
+      "expires": 1800019012,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "site24x7rumID",
+      "value": "2996710165012827.1768483021833.1768483021833.0",
+      "domain": "uat-learn.eccouncil.org",
+      "path": "/",
+      "expires": 1803043021.837256,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "PR_item_name",
+      "value": "undefined",
+      "domain": ".uat-learn.eccouncil.org",
+      "path": "/",
+      "expires": 1771075022,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "PR_item_id",
+      "value": "undefined",
+      "domain": ".uat-learn.eccouncil.org",
+      "path": "/",
+      "expires": 1771075022,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "PR_price",
+      "value": "undefined",
+      "domain": ".uat-learn.eccouncil.org",
+      "path": "/",
+      "expires": 1771075022,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "PR_item_variant",
+      "value": "undefined",
+      "domain": ".uat-learn.eccouncil.org",
+      "path": "/",
+      "expires": 1771075022,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_fbp",
+      "value": "fb.1.1768483022158.452078859854148777",
+      "domain": ".eccouncil.org",
+      "path": "/",
+      "expires": 1776259032,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "g_state",
+      "value": "{\"i_l\":0,\"i_ll\":1768483022404,\"i_b\":\"1nUqX7J3jQP+x3CMFpyqOQGPxhQd6/e6SiwcNuTrdeg\",\"i_e\":{\"enable_itp_optimization\":0}}",
+      "domain": "uat-learn.eccouncil.org",
+      "path": "/",
+      "expires": 1784035022,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NID",
+      "value": "528=gm73ZE_ogh4GnyTcIKNrjhSKNJzxY41d7XLxRFbR5NgK2zoI-zdxWq--OEKvsJpJTTBPTyNrpiDg6H4emfYSE0dQEfl2aDTKjbY0-tUsgnhntQSiyHv6OunHekZ_Je7o8r9kZn0IpVqgAp6D8Q1qYF_Be5JmKFcoLFg1pUac0uIFpbVeY637Bi1Vyd34YTelHKsDtNrwLLS8opE",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1784294222.504721,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://uat-learn.eccouncil.org",
+      "localStorage": [
+        {
+          "name": "codered.marketing",
+          "value": "{\"is_pro\":false}"
+        },
+        {
+          "name": "__token_recaptcha",
+          "value": "0cAFcWeA69vfNOo4fSlNifMY17CMin3vjl1XE1enjPUHlZxgG4GBGZUvm6JmjNAo-4TIOr1xNxugzoXPTxIgzT0dGhdxKOyjd_9BUhIRMsgJGy89m2ivhkjJlbN87dbOz6a4XgS3-L0F1s8Zash67bYFlKfbjc8XGDex_3hx1vugA3HJ7E9SAEW1KZiijPc4hJw8I9o0cOpScRWZ62jHcIv2GZcOvSOKXABW5BONp3kNqTyi-1HCA_oU0bNR0QH3Tw7nm7StOUrstWEIMbcj6Ni1J6zePAIk0yf02TUtU1t665z_c7lNSL6fU7l2hofgQC_kp_fEo7-f_j0iTVjze6EjYmi8OtOf971VqjagF_A_lpkRDRkI-HE-jW6v6lXR2pHKTb-wsi5UGBOmZYTkuhiSmfgBCVMQ--h_RrEJjHGtlpFN6r7EN4vXXEBTjxtZ-ZAARJa1S-ky8hyeeoYUeCq6ntFHkb-UABc0Wl7OYKE8Rcrlm3PDh38WSAYH3ByWQEu1WYTy5Kp4NqSXkc39Jo_GPsJMdrG0gNE6yR80RyDHCTWlX-PYoWkYn0D8bPZZLXFZFYUYtSn3PcUdqZlfZ4bNjfPISfrajK2NzliokdG7zJuxxsfuNexGc0hVhiOhDPwspk1dlV9EitXEKmwaj7ewItPY8K0GxL6GlUfNSC1yX3ApkdjlPJDirXwvcH7BkQHmKhbSQwKkUKyYg4LSp7HdTfOtlKKFouJWsn4pAuzx9vouNDdgZOanb9odL0GskqKLGH-Jc3vQJmiBSRvQrNOZIkHT-VVKK4CkU-1Ntvmb_PfwMF5-yeYUd9jWylFXtgd94ClKrR-2zsRV9SC1GcvVrO5ouqRqojzzqOQi8mVcWdiAig1ep2E6tUfwk91l-ylxnRLC13egjypUBNscFRot2z47g-L0HaRpOMC_xEwL4-EekCu2opECS9yEnRx7W9nLe_ZlAkK_nWI6NyALIq2b-lbumlKGwvu9BjjaYiHI0ov_ueLuw2Pn4XuH7U2m-nLFXg23XIi3zPWzIBeUJUTZTp75wR9L6l0luTBqqsBLjLlRfVBAgVgzg2VSLSgj71PAiz91LtxPm4M-u6KkarBaE2DzjuDHHnjG1dCM5NUz_OYv3r0V-e0-N8rQvIlaJEp0mdQLXzw_Qch80szE004IrdPXpP_7x57sUMiEGfVQj-B0hvlFUDXRkFA2gL3AYX89DBc4esxD4GGwc-wH749Q9BFBCCyObZizrBBxKvfzpRu_ZsqiQURqYjqsjX_9tPBOWEVwKlQaWuSiUfvbYj8-XrBjrZotnSwejmeGSxuj6YmzDGmoi10BbttNVBn_bn_zj-LPDbbxqFoA9DYZfIA3Jhaq59RGQ5tun8cGXC2zYWEdMBtbgjgBUxRcXOMB8AVmmoI_rY0VwZ5o9BB3n2uWfIckiBAWX1Ht7qRtETtMRUtvnTAvI8i3_i15YxRKNxQY5zXzh5ahuFOwCKiNI16gxyIXYVbq1KpPWkuaTnpOh4DdJY7zntiN9jQgBnoXQve5asH5fA93CTUcSYALC5c8hClsL-Ef5ay2qBiXHzgmBVHoazNyzCykDHbbGvSfrrQ7XcblpwaHYPrzoppSJLOUBBJy8KDkz0IXqHWoqAQycnKdCDlfk5KHg-0favuLIe9yb_n0n701QwXkbFMzm9v5uWNde8XIC36yWPu54ov45MPiSMWKTi7Dk"
+        },
+        {
+          "name": "topicsLastReferenceTime",
+          "value": "1768483032893"
+        },
+        {
+          "name": "omVisitsFirst",
+          "value": "{\"path\":\"\",\"queryArgs\":{\"logged\":\"false\"},\"timestamp\":1768483009,\"referrer\":\"\"}"
+        },
+        {
+          "name": "codered.sub.classification",
+          "value": "4"
+        },
+        {
+          "name": "_gcl_ls",
+          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"creationTimeMs\":1768483008793},\"expires\":1776259008793}}"
+        },
+        {
+          "name": "_grecaptcha",
+          "value": "09AKhCRwi8pN36gnQ4WAyurljZPzAaE6xsIalaiZaYiU8n0tIVSjSgXz28RD7JcTdNSA4wYkWZJ3DE33JJbaQ18uE4CwMzpfsjm3_6m544xBzXXNBvZIUO8Zub0m0elHqR"
+        },
+        {
+          "name": "codered.is_enterprise",
+          "value": "false"
+        },
+        {
+          "name": "codered.offer_names",
+          "value": ""
+        },
+        {
+          "name": "attemptedUrl",
+          "value": "/your-portal"
+        },
+        {
+          "name": "ce_bot_detector",
+          "value": "{\"visits\":1,\"clicks\":2,\"firstVisitTime\":1768483022104,\"detected\":false}"
+        },
+        {
+          "name": "lastExternalReferrerTime",
+          "value": "1768483009311"
+        },
+        {
+          "name": "vuex",
+          "value": "{\"trail\":{\"email\":null,\"emailHash\":null,\"conversionTracked\":false,\"serverTimestamp\":1768483010141,\"ip\":\"154.176.163.180\",\"initialLandingPage\":\"https://uat-learn.eccouncil.org/?logged=false\",\"conversions\":{},\"firstSeen\":1768483010354,\"lastSeen\":1768483010354,\"currentPageview\":1768483010354,\"pageviews\":1}}"
+        },
+        {
+          "name": "algolia-client-js-5.36.0-ESOR029ITO",
+          "value": "{}"
+        },
+        {
+          "name": "lastExternalReferrer",
+          "value": "empty"
+        },
+        {
+          "name": "codered:user",
+          "value": "U2FsdGVkX1++ca/LN2uh+/wvzn1grvAwLs8atk7niCUqGQuV9IjlUv6FLVQfDRN7wk2Hl1eM5oJvI/Nsj0GpX/5EewPvyEHxwTTwXcPbDZNEH0RobXr9M5Tgs+q/yVd8+PahgCCjKGyh2Ot4PAIiCKsZ/JniJSb5dL2foiHN3YFLDPmbOADvEQniK2JifP1qRx2uWFCKbROcOYYihLw84Yx1FxEViOiLRHuF8sIQcGBfhNCmEWbvF3LUHn/quOrhYwEdPOcxWp4G/l6f9Ek5E6f6XizqaVDb9myuzqhtk/G7Vhn4q6mWUlysYczV2U+p9imQ0XLk27opdNbf3oFsLtAY0rWavKlaYkv1kQ/Loe+/0X0gxOs5OEr9P9owq3NCws3ir3eun51uIw+QZ5Wq2L79arATqVJKWGhr2wh77kR6pFkn+aC2eXuQzp1AbpVyMayHtp2VU6gUqMz1GGwG7P0YZ8q3srD/7KL9rS7BXCjXFCxStb2Wbn35izkmAOaExe2RST8NrX3wZXy3bOxY7olUI3AKYXV/3jzR/cjuDqkqF//F4tptzucIIa1bFNxqwtLOHBEaFQ8MA0UVLsn8nEbr28UzBIRxiuMtz/4KvrFELH1LdjriJir8t/R0oXTrDkDzSCE/QgybTVfGpNpLrkMGoHJB7uOxjaPuhU4dgSXeWS5euSP3OahuEKUJU3TcaDxh7+LTrNRfHr/egGlfZcSd0EcNy4cAKIYZtb9fpRdganj9GqwKtfbrJsRtUfTZFgajMIozKcXO9UkTjy7mHQJch+C38jHiHmdWLvcajzOi/4Nr380nep/qF4vB52kXXFcxljUcxHXamW83NbYkO+kPCNLAr5/sXQouAHId5jgg9TOWtlv+0Sh5+pR/RX3tWVETA4GcUD4/+Z73mEjAa8F8D+hbKpNShH1dembLI+CTsyWyQSCo3bp3oqwvyGv3r5oK8huFB/cBFhxKnsQJUjhnidH7RRWEjhpau8V112Ug6Isw+HRYL9ASDlcUmznAzC8qsVGlSguzdTsueLQkauD7f8T8Vj7nQ5js33aEdxqznd3ZDyQMOpRU/N9vxplcLvlNyZiePJ/pBic529EdJvaZfbipP+dRhP+cduv3nLU1R1+VZdRGtUsbhqmrmyMHYwe25kBEAR/3ZJST2J/6APE8/d9G7ARP+5CZkJb11RZb/k8ZZd5mAQumvTf0r+v+kUdUJYdaOZotXgiXgr9eW7avoPDpJAAkzX7DHHs/KOOTogC5F4D8klB/jWwZecxy6X36vD2yAnxfM6jnVZTqY7n0TCdwJ8EVsHC3OHGx7HnPWL2ekkCzpOCZd7OjcL563JHXxImqPOiIHLPKDhkdrWihV0k6AW3+klTp9wJjWI7OuUpuLoogSWyjxMqaX3WlXDWzYdWiDHthJPGukC0aabC/UquumDCRTr9yhRKXy61vsouyETssUJ4N7Er+nXB9Ps2yA0R7r9Zriv9mFdRshUGDM0NOBicBTjzBRFIsJ9yFsvQE1d9vbOPSsM0qiNYb9LMS9fJrTdaLMEaaombX7WkI8jE9dUeomhYIVbPDhUc/dfLBB5GCr2sSFSoGNz3/EUp4LYy7nhXzPdR47vzJMCjclaMszxBZPlmrk5kMsWTRlp6C277wpLFVTFLP5z4ysUeDw0gaIlvM/BC5M5wrr2BySxDGtBj67mNXpmfD8IT0RvTrDjGGf79gzZ+p00Z1GWxz99Be5gv1nFBNVlPTYw=="
+        },
+        {
+          "name": "li_adsId",
+          "value": "23e4d9bf-d225-4f2d-b730-a254b8b8808a"
+        }
+      ]
+    },
+    {
+      "origin": "https://cdn.useproof.com",
+      "localStorage": [
+        {
+          "name": "visitorId",
+          "value": "fb9488fb-d407-47af-b070-47b19d00dc34"
+        },
+        {
+          "name": "visitorTrail",
+          "value": "{\"5Wq5D5VxBKNbd7F5VeRHiEn5rxh2\":{\"ref\":\"\",\"initialLandingPage\":\"https://uat-learn.eccouncil.org/?logged=false\",\"utmSource\":null,\"utmCampaign\":null,\"utmContent\":null,\"utmMedium\":null,\"utmTerm\":null,\"init\":true,\"returningVisitor\":false,\"email\":null,\"emailHash\":null,\"conversions\":{},\"lastActivity\":null,\"notificationsDisabled\":null,\"firstSeen\":1768483010354,\"lastSeen\":1768483010354,\"currentPageview\":1768483010354,\"pageviews\":1,\"ip\":\"154.176.163.180\"}}"
+        }
+      ]
+    },
+    {
+      "origin": "https://www.google.com",
+      "localStorage": [
+        {
+          "name": "rc::a",
+          "value": "MWs2ejdtbm5oZ2R5ZQ=="
+        },
+        {
+          "name": "rc::f",
+          "value": "0aAKuB_xFr3mB_r5OQn2kePxHbCcXqomJloTnFGpaJm4UYtd6zQyRDF9J62YmUymk5-uLXpVU"
+        }
+      ]
+    }
+  ]
+}

@@ -8,7 +8,7 @@ async function login(page, email, password) {
     resp.status() === 200
   );
 
-  await page.goto("http://172.177.136.15/?logged=false");
+  await page.goto("https://uat-learn.eccouncil.org/?logged=false");
 
   await page.getByRole('link', { name: 'Login' }).click();
 

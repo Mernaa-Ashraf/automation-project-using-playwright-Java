@@ -49,7 +49,7 @@ test('UI session (codered) + API token → course video', async () => {
   );
 
   const coursesData = await coursesResponse.json();
-  const firstCourse = coursesData.data.courses.data[3]
+  const firstCourse = coursesData.data.courses.data[0]
 
   const courseId = firstCourse.id;
   const courseSlug = firstCourse.slug_url;
@@ -81,32 +81,30 @@ test('UI session (codered) + API token → course video', async () => {
     internalData.data.course.chapters[0].lessons[0].id;
 
   await page.goto(
-    `https://uat-learn.eccouncil.org/courseVideo/${courseSlug}?lessonId=${lessonId}&finalAssessment=false`,
+    "https://uat-learn.eccouncil.org/courseVideo/introduction-to-san-and-nas-storage?lessonId=569a5f51-08a1-4b84-856d-04c0257bb635&finalAssessment=false",
     { waitUntil: 'networkidle' }
   );
+  page.locator('div').filter({ hasText: /^Benefits of SAN and NAS Storage$/ }).first().click();
    const vimeoFrame = page.frameLocator('iframe[src*="player.vimeo.com"]');
+   
+// locate & play video 
+   const play = vimeoFrame.getByRole('button', { name: 'play' });
+   await play.click()
 
-  // Play video
-  //await vimeoFrame.locator('button[aria-label="Play"]').click();
 
-  // Open subtitles menu
-  /*const ccButton = vimeoFrame.locator('button[aria-label*="Subtitles"]');
-  await expect(ccButton).toBeVisible();
-  await ccButton.click();
+   // make sure it is playing (Pause becomes visible/enabled)
+const pauseBtn = vimeoFrame.getByRole('button', { name: 'Pause' });
+await expect(pauseBtn).toBeVisible();
 
-  // Select subtitle
-  await vimeoFrame.locator('[role="menuitem"]').first().click();
+// wait 10 seconds real time
+await page.waitForTimeout(10_000);
 
-  // Validate subtitles appear
-  const subtitles = vimeoFrame.locator('.vjs-text-track-display');
-  await expect(subtitles).toBeVisible();
+await pauseBtn.click();
+await page.pause()
 
-  const text1 = await subtitles.innerText();
-  expect(text1.trim().length).toBeGreaterThan(0);
 
-  // Validate subtitles update
-  await page.waitForTimeout(3000);
-  const text2 = await subtitles.innerText();
-  expect(text2).not.toEqual(text1);  */
-  await page.pause();
+  
+  //const settings=vimeoFrame.getByRole('button', { name: 'Settings' })
+  //await settings.click()
+
 });
